@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Bilheteria do Titanic</title>
+        <link rel="stylesheet" href="style.css" />
+        <script src="script.js"></script>
+      </head>
+      <body>
+        <header>
+          <nav class="menu">
+            <ul>
+              <li><a href="index.html">Início</a></li>
+              <li><a href="sobre.html">Sobre</a></li>
+              <li><a href="tickets.html">Tickets</a></li>
+              <li><a href="cadastro.html">Cadastro</a></li>
+              <li><a href="compra.html">Compras</a></li>
+            </ul>
+          </nav>
+          
+        </header>
+        <main>
+            <h1>Compra</h1>
+            <form id="formCompra" onsubmit="return validarFormularioCompra()">
+              <div class="input-group">
+                <label for="meioPagamento">Meio de pagamento:</label>
+                <select id="meioPagamento" name="meioPagamento" required>
+                  <option value="">Selecione</option>
+                  <option value="cartaoCredito">Cartão de crédito</option>
+                  <option value="boleto">Boleto bancário</option>
+                </select>
+              </div>
+              <div class="input-group">
+                <label for="produto">Produto:</label>
+                <select id="produto" name="produto" required>
+                  <option value="">Selecione</option>
+                  <option value="ticketVip">Ticket Vip</option>
+                  <option value="ticketBasico">Ticket Basico</option>
+                </select>
+                <label for="quantidade">Quantidade:</label>
+                <input type="number" id="quantidade" name="quantidade" min="1" value="1" required>
+                <button type="button" id="btnAdicionar" onclick="adicionarProduto()">Adicionar</button>
+              </div>
+              <div class="form-group">
+                <label for="total">Total:</label>
+                <input type="text" id="total" name="total" disabled>
+              </div>
+              <button class="btn-comprar" type="submit">Comprar</button>
+            </form>
+          </main>
+          
+    <footer>
+      <p>Contatos da Empresa:</p>
+      <ul>
+        <li>Endereço: Rua das Palmeiras, 123</li>
+        <li>Telefone: (11) 1234-5678</li>
+        <li>Email: contato@bilheteriadenavio.com.br</li>
+      </ul>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Bilheteria do Titanic</title>
+        <link rel="stylesheet" href="style.css" />
+        <script src="script.js"></script>
+        
+      </head>
+      <body>
+        <header>
+          <nav class="menu">
+            <ul>
+              <li><a href="index.html">Início</a></li>
+              <li><a href="sobre.html">Sobre</a></li>
+              <li><a href="tickets.html">Tickets</a></li>
+              <li><a href="cadastro.html">Cadastro</a></li>
+              <li><a href="compra.html">Compras</a></li>
+            </ul>
+          </nav>
+          
+        </header>
+        <main>
+            <h1 class="text-5xl font-bold text-center text-gray-800">Tickets</h1>
+            <p class="text-lg text-center text-gray-600 mb-6">Selecione o seu ticket:</p>
+            <ul class="grid grid-cols-2 gap-4" id="ul1">
+              <li class="bg-white rounded-lg shadow-md flex" id="li1">
+                <div class="p-6">
+                  <h2 class="text-2xl font-bold text-gray-800">Ticket Básico</h2>
+                  <p class="text-lg text-gray-600 mb-4">Viagem de ida e volta</p>
+                  <p class="text-lg text-gray-600 mb-4">Comida inclusa</p>
+                  <p class="text-lg font-bold text-gray-800 mb-4">R$ 200,00</p>
+                  <form onsubmit="return false">
+                    <label for="ticketBasico" class="text-lg text-gray-600 mb-2">Quantidade:</label>
+                    <div class="flex items-center">
+                      <input type="number" id="ticketBasico" name="ticketBasico" min="1" value="1" class="w-16 py-2 px-3 border rounded-full text-lg text-gray-600 mr-2">
+                      <button onclick="adicionarAoCarrinho('Ticket Básico', 200, document.getElementById('ticketBasico').value)" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full transition duration-200">Adicionar ao carrinho</button>
+                    </div>
+                  </form>
+                </div>
+              </li>
+              <li class="bg-white rounded-lg shadow-md flex">
+                <div class="p-6">
+                  <h2 class="text-2xl font-bold text-gray-800">Ticket VIP</h2>
+                  <p class="text-lg text-gray-600 mb-4">Viagem de ida e volta</p>
+                  <p class="text-lg text-gray-600 mb-4">Comida inclusa</p>
+                  <p class="text-lg text-gray-600 mb-4">Quarto privado</p>
+                  <p class="text-lg text-gray-600 mb-4">Academia</p>
+                  <p class="text-lg font-bold text-gray-800 mb-4">R$ 500,00</p>
+                  <form onsubmit="return false">
+                    <label for="ticketVip" class="text-lg text-gray-600 mb-2">Quantidade:</label>
+                    <div class="flex items-center">
+                      <input type="number" id="ticketVip" name="ticketVip" min="1" value="1" class="w-16 py-2 px-3 border rounded-full text-lg text-gray-600 mr-2">
+                      <button onclick="adicionarAoCarrinho('Ticket VIP', 500, document.getElementById('ticketVip').value)" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full transition duration-200">Adicionar ao carrinho</button>
+                    </div>
+                  </form>
+                </div>
+              </li>
+            </ul>
+          </main>
+
+          <br>
+<br>
+<br>
+
+<br>
+<br>
+<br>
+
+<br>
+<br>
+<br>
+      <footer>
+        <p>Contatos da Empresa:</p>
+        <ul>
+          <li>Endereço: Rua das Palmeiras, 123</li>
+          <li>Telefone: (11) 1234-5678</li>
+          <li>Email: contato@bilheteriadenavio.com.br</li>
+        </ul>
+      </footer>
+    </body>
+    </html>
